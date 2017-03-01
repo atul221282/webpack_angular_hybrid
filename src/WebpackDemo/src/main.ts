@@ -5,6 +5,10 @@ import { UpgradeModule } from '@angular/upgrade/static';
 import * as angular from "angular";
 import { InitTestModule } from "./app/test";
 import '@progress/kendo-ui';
+import 'angular-animate';
+import 'angular-sanitize';
+import 'angular-aria';
+import 'angular-material';
 
 //depending on the env mode, enable prod mode or add debugging modules
 if (process.env.ENV === 'build') {
@@ -13,7 +17,7 @@ if (process.env.ENV === 'build') {
 
 let testmodule = angular.module("testmodule", []);
 
-angular.module("app", ["kendo.directives", testmodule.name]);
+angular.module("app", ["kendo.directives", 'ngAria', 'ngAnimate', 'ngMaterial', 'ngSanitize', testmodule.name]);
 
 InitTestModule(testmodule);
 

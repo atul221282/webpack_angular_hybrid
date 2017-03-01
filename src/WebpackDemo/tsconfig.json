@@ -10,9 +10,6 @@
     "noUnusedParameters": true,
     "lib": [ "es2015", "dom" ]
   },
-  "exclude": [
-    "node_modules"
-  ],
   "compileOnSave": false,
   "buildOnSave": false,
   "awesomeTypescriptLoaderOptions": {
