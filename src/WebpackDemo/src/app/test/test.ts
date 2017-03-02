@@ -15,7 +15,7 @@
 }
 
 class TestController {
-    public title: string = "Hello I am "
+    public title: string = "Hello "
     public asas: ITest;
     static $inject: string[] = ["$window", "$timeout"];
     constructor(private $window: ng.IWindowService, private $timeout: ng.ITimeoutService) {
