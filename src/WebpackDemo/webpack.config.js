@@ -59,7 +59,7 @@ module.exports = function makeWebpackConfig() {
      * Reference: http://webpack.github.io/docs/configuration.html#output
      */
     config.output = isTest ? {} : {
-        path: root('dist'),
+        path: root('./wwwroot/dist'),
         publicPath: isProd ? '/' : 'http://localhost:8080/',
         filename: isProd ? 'js/[name].[hash].js' : 'js/[name].js',
         chunkFilename: isProd ? '[id].[hash].chunk.js' : '[id].chunk.js'
@@ -278,5 +278,7 @@ module.exports = function makeWebpackConfig() {
 // Helper functions
 function root(args) {
     args = Array.prototype.slice.call(arguments, 0);
-    return path.join.apply(path, [__dirname].concat(args));
+    let pathValue = path.join.apply(path, [__dirname].concat(args));
+    console.log(pathValue);
+    return pathValue;
 }

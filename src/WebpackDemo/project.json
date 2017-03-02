@@ -63,7 +63,12 @@
   },
 
   "scripts": {
-    "prepublish": [ "bower install", "dotnet bundle" ],
+    "prepublish": [
+      "dotnet bundle",
+      "npm install",
+      "node node_modules/webpack/bin/webpack.js --config webpack.config.js --env.prod",
+      "node node_modules/webpack/bin/webpack.js --env.prod"
+    ],
     "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
   }
 }

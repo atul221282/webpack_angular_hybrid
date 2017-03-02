@@ -22,7 +22,8 @@
     "docs": "typedoc --options typedoc.json src/app/app.component.ts",
     "start": "npm run server",
     "start:hmr": "npm run server -- --hot",
-    "postinstall": "npm run webdriver-update"
+    "postinstall": "npm run webdriver-update",
+    "dist": "node node_modules/webpack/bin/webpack.js --config webpack.config.js --env.prod"
   },
   "dependencies": {
     "@angular/common": "2.4.7",

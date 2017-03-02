@@ -8,7 +8,6 @@
 /// <reference path="../src/app/core/loading-spinner/loading-spinner.component.js" />
 /// <reference path="../src/app/home/home.component.e2e-spec.js" />
 /// <reference path="../webpack.config.js" />
-/// <reference path="js/site.js" />
 /// <reference path="lib/bootstrap/dist/js/bootstrap.js" />
 /// <reference path="lib/jquery/dist/jquery.js" />
 /// <reference path="lib/jquery-validation/dist/jquery.validate.js" />
