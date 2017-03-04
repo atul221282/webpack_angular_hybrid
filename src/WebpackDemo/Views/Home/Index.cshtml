@@ -5,23 +5,14 @@
     <title>Angular 2 App | ng2-webpack</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 
-    <link href="css/site.css" rel="stylesheet">
-    <link href="css/kendo.common.min.css" rel="stylesheet">
-    <link href="css/kendo.default.min.css" rel="stylesheet">
-    <link href="css/kendo.default.mobile.min.css" rel="stylesheet">
 
-    <link href="css/styles.css" rel="stylesheet">
-
-    <!--<base href="/">-->
-    <link href="/css/styles.css" rel="stylesheet">
+    <base href="/">
+    <link href="~/dist/css/vendor.css" rel="stylesheet" />
 </head>
 <body>
-    @*<test></test>
-    <user></user>*@
-    <br />
-    <loading-spinner></loading-spinner>
-    <script type="text/javascript" src="/dist/js/polyfills.js"></script>
-    <script type="text/javascript" src="/dist/js/vendor.js"></script>
-    <script type="text/javascript" src="/dist/js/app.js"></script>
+    <my-app>Loading</my-app>
+    <script src="~/dist/polyfills.js"></script>
+    <script src="~/dist/vendor.js"></script>
+    <script src="~/dist/app.js"></script>
 </body>
 </html>

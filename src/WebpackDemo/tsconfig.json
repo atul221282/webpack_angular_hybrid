@@ -9,11 +9,18 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "lib": [ "es2015", "dom" ]
+
   },
   "compileOnSave": false,
   "buildOnSave": false,
   "awesomeTypescriptLoaderOptions": {
     "forkChecker": true,
     "useWebpackText": true
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "typings/main",
+    "typings/main.d.ts",
+    "node_modules/@types/jasmine/index.d.ts"
+  ]
 }
