@@ -85,6 +85,30 @@ const config = {
         //        comments: false
         //    }
         //}),
+        //new CommonsChunkPlugin({
+        //    names: [
+        //      'polyfills',
+        //      'vendors',
+        //    ],
+        //    minChunks: 4, // names.length,
+        //    filename: '[name].js'
+        //}),
+        new CommonsChunkPlugin({
+            names: [
+              'polyfills',
+              'vendors'
+            ],
+            minChunks: 2, // names.length,
+            filename: '[name].js',
+        }),
+          new HtmlWebpackPlugin({
+              template: './src/index.html',
+              chunks: [
+                'polyfills',
+                'vendors',
+                'app',
+              ],
+          }),
         new ExtractTextPlugin({ filename: 'css/[name].css' }),
         new webpack.LoaderOptionsPlugin({
             options: {
@@ -108,9 +132,6 @@ const config = {
                   })
                 ]
             }
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/index.html'
         })
     ],
 
