@@ -1,6 +1,7 @@
 "use strict";
 var core_1 = require("@angular/core");
 var shared_1 = require("./shared");
+require("../images/mario.jpg");
 var AppComponent = (function () {
     function AppComponent(api) {
         this.api = api;

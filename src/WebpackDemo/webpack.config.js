@@ -64,7 +64,13 @@ const config = {
 
            // support for .html as raw text
            // todo: change the loader to something that adds a hash to images
-           { test: /\.html$/, loader: 'raw-loader', exclude: root('src', 'public') }
+           { test: /\.html$/, loader: 'raw-loader', exclude: root('src', 'public') },
+
+             // copy those assets to output
+          {
+              test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+              loader: 'file-loader?name=images/[name].[ext]?'
+          },
 
         ]
     },
@@ -73,7 +79,7 @@ const config = {
         new ExtractTextPlugin({ filename: 'css/[name].css' }),
         new webpack.LoaderOptionsPlugin({
             options: {
-               
+
                 /**
                  * Sass
                  * Reference: https://github.com/jtangelder/sass-loader
