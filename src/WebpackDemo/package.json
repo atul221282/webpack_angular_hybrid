@@ -22,7 +22,7 @@
     "prod": "rimraf dist && webpack -p",
     "dev": " rimraf dist && webpack --progress --profile",
     "dev-w": "webpack --watch",
-    "dev-server": "webpack-dev-server --inline"
+    "dev-server": "webpack-dev-server --inline --progress"
   },
   "dependencies": {
     "@angular/common": "2.4.7",

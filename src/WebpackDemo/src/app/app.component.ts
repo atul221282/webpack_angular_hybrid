@@ -12,8 +12,6 @@ export class AppComponent {
     title: string;
     imgSrc: string;
     constructor(private api: ApiService) {
-        console.log(image);
-        debugger;
         this.imgSrc = image.indexOf('data:') > -1 ? image : `./dist/${image}`;
         this.title = this.api.title;
     }

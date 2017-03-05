@@ -2,13 +2,12 @@
 var core_1 = require("@angular/core");
 var shared_1 = require("./shared");
 var image = require('../images/mario.jpg');
+var images_1 = require("./images");
 var AppComponent = (function () {
     function AppComponent(api) {
         this.api = api;
         this.url = 'https://github.com/preboot/angular2-webpack';
-        console.log(image);
-        debugger;
-        this.imgSrc = image.indexOf('data:') > -1 ? image : "./dist/" + image;
+        this.imgSrc = images_1.getMarioImage(); //image.indexOf('data:') > -1 ? image : `./dist/${image}`;
         this.title = this.api.title;
     }
     return AppComponent;

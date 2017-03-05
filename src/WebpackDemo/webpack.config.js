@@ -85,14 +85,6 @@ const config = {
         //        comments: false
         //    }
         //}),
-        //new CommonsChunkPlugin({
-        //    names: [
-        //      'polyfills',
-        //      'vendors',
-        //    ],
-        //    minChunks: 4, // names.length,
-        //    filename: '[name].js'
-        //}),
         new CommonsChunkPlugin({
             names: [
               'polyfills',
