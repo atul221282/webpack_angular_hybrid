@@ -25,3 +25,14 @@ footer {
     text-align: center;
     font-size: 0.8em;
 }
+
+h2 {
+    color: yellow;
+}
+
+.mario-img {
+    background: url(./dist/images/mario.jpg) -131px 1px no-repeat;
+    margin-right: 15px;
+    height:150px;
+    width:150px;
+}

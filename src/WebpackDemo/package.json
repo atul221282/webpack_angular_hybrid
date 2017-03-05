@@ -19,8 +19,8 @@
     "start:hmr": "npm run server -- --hot",
     "postinstall": "npm run webdriver-update",
     "dist": "node node_modules/webpack/bin/webpack.js --config webpack.config.js --env.prod",
-    "prod": "webpack -p",
-    "dev": "webpack",
+    "prod": "rimraf dist && webpack -p",
+    "dev": " rimraf dist && webpack --progress --profile",
     "dev-w": "webpack --watch",
     "dev-server": "webpack-dev-server --inline"
   },

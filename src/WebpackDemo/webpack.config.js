@@ -67,15 +67,24 @@ const config = {
            { test: /\.html$/, loader: 'raw-loader', exclude: root('src', 'public') },
 
              // copy those assets to output
+          //{
+          //    test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+          //    loader: 'file-loader?name=images/[name].[ext]?'
+          //},
           {
               test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-              loader: 'file-loader?name=images/[name].[ext]?'
+              loader: 'url-loader?limit=10000'
           },
 
         ]
     },
 
     plugins: [
+        //new webpack.optimize.UglifyJsPlugin({
+        //    output: {
+        //        comments: false
+        //    }
+        //}),
         new ExtractTextPlugin({ filename: 'css/[name].css' }),
         new webpack.LoaderOptionsPlugin({
             options: {
@@ -99,6 +108,9 @@ const config = {
                   })
                 ]
             }
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/index.html'
         })
     ],
 
