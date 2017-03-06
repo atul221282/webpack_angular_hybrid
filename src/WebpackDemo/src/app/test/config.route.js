@@ -1,12 +1,11 @@
 "use strict";
 var MyConfig = (function () {
-    function MyConfig($stateProvider, $urlProvider, $animateProvider, $mdDialog) {
+    function MyConfig($stateProvider, $urlProvider, $animateProvider) {
+        //let result = this.$mdDialog.confirm();
+        //console.log(this.$mdDialog);
         this.$stateProvider = $stateProvider;
         this.$urlProvider = $urlProvider;
         this.$animateProvider = $animateProvider;
-        this.$mdDialog = $mdDialog;
-        //let result = this.$mdDialog.confirm();
-        console.log(this.$mdDialog);
         this.$animateProvider.classNameFilter(/^(?:(?!ng-animate-disabled).)*$/);
         this.init();
     }

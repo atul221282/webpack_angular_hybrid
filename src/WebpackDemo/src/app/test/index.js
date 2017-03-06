@@ -13,9 +13,8 @@ function InitTestModule(app) {
         "$stateProvider",
         "$urlRouterProvider",
         "$animateProvider",
-        "$mdDialog",
-        function ($stateProvider, $urlRouterProvider, $animateProvider, $mdDialog) {
-            return new components_1.MyConfig($stateProvider, $urlRouterProvider, $animateProvider, $mdDialog);
+        function ($stateProvider, $urlRouterProvider, $animateProvider) {
+            return new components_1.MyConfig($stateProvider, $urlRouterProvider, $animateProvider);
         }
     ]);
 }

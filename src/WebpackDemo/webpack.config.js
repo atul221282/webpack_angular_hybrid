@@ -56,9 +56,10 @@ module.exports = function makeWebpackConfig() {
     config.externals = {
         "angular": "angular",
         "moment": "moment",
-        "_": "_",
-        "angular-ui-router": "angular-ui-router",
-        "angular-material": "angular-material"
+        "_": "_"
+        //,
+        //"angular-ui-router": "angular-ui-router",
+        //"angular-material": "angular-material"
     };
 
     /**

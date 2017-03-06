@@ -19,8 +19,8 @@ export class Test implements ng.IComponentOptions {
 class TestController {
     public title: string = "Hello "
     public asas: ITest;
-    static $inject: string[] = ["$window", "$timeout", "$mdDialog"];
-    constructor(private $window: ng.IWindowService, private $timeout: ng.ITimeoutService,
+    static $inject: string[] = ["$timeout", "$mdDialog"];
+    constructor(private $timeout: ng.ITimeoutService,
         private $mdDialog: angular.material.IDialogService) {
         $("#gg").val("12121");
 
@@ -29,7 +29,6 @@ class TestController {
     $onInit() {
         this.$mdDialog.confirm();
         this.asas = <ITest>{ number: 1 };
-        console.log(this.$window);
         this.$timeout(() => {
             $("#gg").val("12121-Init");
             this.showDialog();
