@@ -35,7 +35,6 @@ namespace WebpackDemo
         {
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
-
             services.AddMvc();
         }
 
