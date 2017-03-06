@@ -1,4 +1,6 @@
-﻿export class Test implements ng.IComponentOptions {
+﻿import * as angular from 'angular';
+
+export class Test implements ng.IComponentOptions {
     public controller: any;
     public template: string;
     public templateUrl: string;
@@ -17,17 +19,32 @@
 class TestController {
     public title: string = "Hello "
     public asas: ITest;
-    static $inject: string[] = ["$window", "$timeout"];
-    constructor(private $window: ng.IWindowService, private $timeout: ng.ITimeoutService) {
+    static $inject: string[] = ["$window", "$timeout", "$mdDialog"];
+    constructor(private $window: ng.IWindowService, private $timeout: ng.ITimeoutService,
+        private $mdDialog: angular.material.IDialogService) {
         $("#gg").val("12121");
+
     }
 
     $onInit() {
+        this.$mdDialog.confirm();
         this.asas = <ITest>{ number: 1 };
         console.log(this.$window);
         this.$timeout(() => {
             $("#gg").val("12121-Init");
+            this.showDialog();
         }, 3000);
+    }
+
+    showDialog() {
+        this.$mdDialog.show(
+            this.$mdDialog.alert()
+                .parent(angular.element(document.querySelector('#popupContainer')))
+                .clickOutsideToClose(true)
+                .title('This is an alert title')
+                .textContent('You can specify some description text in here.')
+                .ariaLabel('Alert Dialog Demo')
+                .ok('Got it!'));
     }
 }
 

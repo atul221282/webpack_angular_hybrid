@@ -4,4 +4,5 @@ function __export(m) {
 }
 __export(require("./test"));
 __export(require("./user"));
+__export(require("./config.route"));
 //# sourceMappingURL=components.js.map
