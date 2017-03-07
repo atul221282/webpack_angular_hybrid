@@ -11,6 +11,7 @@ var test_1 = require("./app/test");
 if (process.env.ENV === 'production') {
     core_1.enableProdMode();
 }
+console.info(process.env.ENV);
 var data = [{ id: 1, name: "jquery" },
     { id: 2, name: "angular" },
     { id: 3, name: "moment" },

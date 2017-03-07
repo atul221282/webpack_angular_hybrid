@@ -13,6 +13,8 @@ if (process.env.ENV === 'production') {
     enableProdMode();
 }
 
+console.info(process.env.ENV);
+
 var data = [{ id: 1, name: "jquery" },
 { id: 2, name: "angular" },
 { id: 3, name: "moment" },

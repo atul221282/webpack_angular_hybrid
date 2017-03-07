@@ -79,6 +79,7 @@
     "karma-webpack": "2.0.2",
     "node-sass": "^4.5.0",
     "null-loader": "0.1.1",
+    "optimize-js-plugin": "0.0.4",
     "postcss-loader": "^1.1.0",
     "protractor": "^4.0.10",
     "raw-loader": "0.5.1",
