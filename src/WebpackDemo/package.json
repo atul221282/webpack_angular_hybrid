@@ -23,7 +23,7 @@
     "start": "npm run server",
     "start:hmr": "npm run server -- --hot",
     "postinstall": "npm run webdriver-update",
-    "prod": "webpack -p --config webpack.prod.js"
+    "prod": "webpack --config webpack.prod.js"
   },
   "dependencies": {
     "@angular/common": "2.4.7",
