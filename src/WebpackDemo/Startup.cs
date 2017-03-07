@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.ResponseCompression;
+using System.IO.Compression;
 
 namespace WebpackDemo
 {
@@ -36,6 +38,12 @@ namespace WebpackDemo
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
+            services.Configure<GzipCompressionProviderOptions>(options => options.Level = CompressionLevel.Fastest);
+            services.AddResponseCompression(options =>
+            {
+                options.Providers.Add<GzipCompressionProvider>();
+            });
+
             services.AddMvc();
         }
 
@@ -44,7 +52,7 @@ namespace WebpackDemo
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-
+            app.UseResponseCompression();
             app.UseApplicationInsightsRequestTelemetry();
 
             if (env.IsDevelopment())

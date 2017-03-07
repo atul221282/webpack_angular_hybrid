@@ -537,3 +537,37 @@ The remote name could not be resolved: 'gcop.watch.masoud.g.e'
 WebException @3/7/2017 11:00:21 PM
 The remote name could not be resolved: 'gcop.watch.masoud.g.e'
 *******************************************************
+WebException @3/7/2017 11:09:18 PM
+The remote name could not be resolved: 'gcop.watch.masoud.g.e'
+*******************************************************
+ArgumentException @3/7/2017 11:09:27 PM
+The path is not of a legal form.
+System.ArgumentException: The path is not of a legal form.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.GetFullPathInternal(String path)
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.Directory.GetFiles(String path)
+   at GCop.Core.Settings.Settings.IsSharedProject(String filePath)
+   at GCop.Core.Settings.VisualStudioSettingsValidator.IsContextValid(Rule rule, SyntaxTree tree, IEnumerable`1 references)
+*******************************************************
+WebException @3/7/2017 11:09:39 PM
+The remote name could not be resolved: 'gcop.watch.masoud.g.e'
+Actual error is :
+Syntax node is not within syntax tree
+*******************************************************
+WebException @3/7/2017 11:10:20 PM
+The remote name could not be resolved: 'gcop.watch.masoud.g.e'
+*******************************************************
+WebException @3/7/2017 11:10:21 PM
+The remote name could not be resolved: 'gcop.watch.masoud.g.e'
+*******************************************************
+WebException @3/7/2017 11:11:41 PM
+The remote name could not be resolved: 'gcop.watch.masoud.g.e'
+*******************************************************
+WebException @3/7/2017 11:13:41 PM
+The remote name could not be resolved: 'gcop.watch.masoud.g.e'
+*******************************************************
+WebException @3/7/2017 11:16:41 PM
+The remote name could not be resolved: 'gcop.watch.masoud.g.e'
+*******************************************************
