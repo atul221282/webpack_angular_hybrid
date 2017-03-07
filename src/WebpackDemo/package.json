@@ -22,7 +22,8 @@
     "docs": "typedoc --options typedoc.json src/app/app.component.ts",
     "start": "npm run server",
     "start:hmr": "npm run server -- --hot",
-    "postinstall": "npm run webdriver-update"
+    "postinstall": "npm run webdriver-update",
+    "prod": "webpack -p --config webpack.prod.js"
   },
   "dependencies": {
     "@angular/common": "2.4.7",
@@ -57,6 +58,7 @@
     "autoprefixer": "^6.3.2",
     "awesome-typescript-loader": "^3.0.0-beta.17",
     "codelyzer": "2.0.0",
+    "compression-webpack-plugin": "^0.3.2",
     "copy-webpack-plugin": "^4.0.0",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",

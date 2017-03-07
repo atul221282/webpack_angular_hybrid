@@ -8,7 +8,7 @@ var moment = require("moment");
 var _ = require("lodash");
 var test_1 = require("./app/test");
 // depending on the env mode, enable prod mode or add debugging modules
-if (process.env.ENV === 'build') {
+if (process.env.ENV === 'production') {
     core_1.enableProdMode();
 }
 var data = [{ id: 1, name: "jquery" },

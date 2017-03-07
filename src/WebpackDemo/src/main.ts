@@ -9,7 +9,7 @@ import * as _ from 'lodash';
 import { InitTestModule } from './app/test';
 
 // depending on the env mode, enable prod mode or add debugging modules
-if (process.env.ENV === 'build') {
+if (process.env.ENV === 'production') {
     enableProdMode();
 }
 
