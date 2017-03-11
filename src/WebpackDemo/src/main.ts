@@ -3,8 +3,8 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { UpgradeModule } from '@angular/upgrade/static';
 import * as angular from 'angular';
-import * as moment from 'moment';
-import * as _ from 'lodash';
+//import * as moment from 'moment';
+//import * as _ from 'lodash';
 
 import { InitTestModule } from './app/test';
 
@@ -15,22 +15,11 @@ if (process.env.ENV === 'production') {
 
 console.info(process.env.ENV);
 
-var data = [{ id: 1, name: "jquery" },
-{ id: 2, name: "angular" },
-{ id: 3, name: "moment" },
-{ id: 4, name: "lodash" }];
+let testModule = angular.module("app.test", []);
 
-let appModule = angular.module('app', ['ui.router', 'ngAria', 'ngAnimate', 'ngMaterial', 'ngSanitize']);
+let mainMod = angular.module('app', ['ui.router', 'ngAria', 'ngAnimate', 'ngMaterial', 'ngSanitize', testModule.name]);
 
-$("#name").val("Hello");
-setTimeout(() => {
-    $("#name").val("Hello Atul "
-        + moment(Date.now()).format('MMM-DD-YYYY')
-        + " " + _.find(data, ["id", 4]).name);
-}, 5000);
-
-
-InitTestModule(appModule);
+InitTestModule(mainMod, testModule);
 
 export function main() {
     //return platformBrowserDynamic().bootstrapModule(AppModule);

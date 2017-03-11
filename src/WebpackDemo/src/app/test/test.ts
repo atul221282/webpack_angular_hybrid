@@ -19,11 +19,15 @@ export class Test implements ng.IComponentOptions {
 class TestController {
     public title: string = "Hello "
     public asas: ITest;
-    static $inject: string[] = ["$timeout", "$mdDialog"];
+    static $inject: string[] = ["$timeout", "$mdDialog", "$http"];
     constructor(private $timeout: ng.ITimeoutService,
-        private $mdDialog: angular.material.IDialogService) {
+        private $mdDialog: angular.material.IDialogService, private $http: angular.IHttpService) {
         $("#gg").val("12121");
-
+        this.$http
+            .get("http://samples.openweathermap.org/data/2.5/forecast?q=M%C3%BCnchen,DE&appid=b1b15e88fa797225412429c1c50c122a1")
+            .then((response) => {
+                console.log(response);
+            })
     }
 
     $onInit() {
